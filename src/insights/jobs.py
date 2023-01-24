@@ -4,7 +4,7 @@ from typing import List, Dict
 
 @lru_cache
 def read(path: str) -> List[Dict]:
-    """Reads a file from a given path and returns its contents
+    """Reads a file from a given path and returns its content
 
     Parameters
     ----------
