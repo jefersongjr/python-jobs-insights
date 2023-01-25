@@ -9,7 +9,7 @@ def get_max_salary(path: str) -> int:
     for salary in data:
         if salary[x] == "":
             pass
-        if salary[x].isnumeric() and int(salary[x]) > biggestSalary:
+        elif salary[x].isnumeric() and int(salary[x]) > biggestSalary:
             biggestSalary = int(salary[x])
     print(biggestSalary)
     return biggestSalary
