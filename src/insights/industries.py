@@ -9,6 +9,8 @@ def get_unique_industries(path: str) -> List[str]:
     for industry in industries:
         if industry["industry"] in industry_types:
             pass
+        elif industry["industry"] == '':
+            pass
         else:
             industry_types.append(industry["industry"])
     return industry_types
