@@ -4,15 +4,12 @@ from src.insights import jobs
 
 def get_max_salary(path: str) -> int:
     data = jobs.read(path)
-    biggestSalary = 0
-    x = "max_salary"
+    salary_types = []
     for salary in data:
-        if salary[x] == "":
-            pass
-        elif salary[x].isnumeric() and int(salary[x]) > biggestSalary:
-            biggestSalary = int(salary[x])
-    print(biggestSalary)
-    return biggestSalary
+        if salary["max_salary"].isnumeric():
+            salary_types.append(int(salary["max_salary"]))
+    print(max(salary_types))
+    return max(salary_types)
 
 
 def get_min_salary(path: str) -> int:
