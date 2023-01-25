@@ -8,26 +8,16 @@ def get_max_salary(path: str) -> int:
     for salary in data:
         if salary["max_salary"].isnumeric():
             salary_types.append(int(salary["max_salary"]))
-    print(max(salary_types))
     return max(salary_types)
 
 
 def get_min_salary(path: str) -> int:
-    """Get the minimum salary of all jobs
-
-    Must call `read`
-
-    Parameters
-    ----------
-    path : str
-        Must be passed to `read`
-
-    Returns
-    -------
-    int
-        The minimum salary paid out of all job opportunities
-    """
-    raise NotImplementedError
+    data = jobs.read(path)
+    salary_types = []
+    for salary in data:
+        if salary["min_salary"].isnumeric():
+            salary_types.append(int(salary["min_salary"]))
+    return min(salary_types)
 
 
 def matches_salary_range(job: Dict, salary: Union[int, str]) -> bool:
