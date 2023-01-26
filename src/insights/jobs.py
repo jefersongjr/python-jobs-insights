@@ -29,6 +29,3 @@ def get_unique_job_types(path: str) -> List[str]:
 def filter_by_job_type(jobs: List[Dict], job_type: str) -> List[Dict]:
     filtered_jobs = [job for job in jobs if job["job_type"] == job_type]
     return filtered_jobs
-
-# A função deve retornar uma lista com todos os empregos
-#  onde a coluna job_type corresponde ao parâmetro job_type
